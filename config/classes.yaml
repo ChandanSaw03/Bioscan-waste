@@ -1,0 +1,56 @@
+# BioScan class taxonomy (v2, 7 energy classes + hazard flags)
+# These are the classes used by the tile classifier and the energy engine.
+# Battery and medical items are hazard flags, NOT energy classes.
+
+energy_classes:
+  0: food_organic
+  1: agri_residue
+  2: paper_cardboard
+  3: plastic
+  4: textile
+  5: metal
+  6: glass_inert
+
+# Class groupings for recommendation logic
+groups:
+  organic:
+    - food_organic
+    - agri_residue
+  combustible:
+    - paper_cardboard
+    - plastic
+    - textile
+  inert:
+    - metal
+    - glass_inert
+
+# Hazard flags – trigger a warning but are excluded from energy math
+hazard_flags:
+  - battery
+  - medical
+
+# Label remapping from Garbage Dataset V2 to BioScan classes
+# Source classes → BioScan target
+remap_garbage_v2:
+  biological: food_organic
+  cardboard: paper_cardboard
+  paper: paper_cardboard
+  plastic: plastic
+  clothes: textile
+  shoes: textile
+  metal: metal
+  glass: glass_inert
+  trash: glass_inert       # conservative: mixed trash → inert
+  battery: _hazard_battery  # flagged, excluded from energy classes
+
+# Label remapping from RealWaste to BioScan classes
+remap_realwaste:
+  Cardboard: paper_cardboard
+  Food Organics: food_organic
+  Glass: glass_inert
+  Metal: metal
+  Miscellaneous Trash: glass_inert
+  Paper: paper_cardboard
+  Plastic: plastic
+  Textile Trash: textile
+  Vegetation: agri_residue

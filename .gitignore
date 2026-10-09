@@ -1,0 +1,40 @@
+# Data - do not commit raw datasets
+data/original/
+data/raw/
+data/remapped/
+data/classifier_dataset/
+data/standardized_*/
+data/custom/*.jpg
+data/custom/*.png
+
+# Model weights
+models/*.pt
+models/*.onnx
+runs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Uploads
+uploads/

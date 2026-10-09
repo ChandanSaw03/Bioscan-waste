@@ -1,0 +1,31 @@
+# BioScan – Vision-Based Biomass Energy Potential Estimator
+# Python 3.10+
+
+# --- Core ML ---
+ultralytics>=8.0.0        # YOLOv8-cls for tile classification
+opencv-python-headless>=4.8  # Video/image processing (headless for Docker)
+torch>=2.0.0              # PyTorch backend for Ultralytics (CPU)
+torchvision>=0.15.0       # Image transforms
+
+# --- Data & Config ---
+pandas>=2.0               # Batch logging and CSV I/O
+numpy>=1.24               # Numerical operations
+PyYAML>=6.0               # Config loading
+Pillow>=10.0              # Image I/O for dataset scripts
+
+# --- API ---
+fastapi>=0.100            # REST backend (/analyze endpoint)
+uvicorn[standard]>=0.23   # ASGI server for FastAPI
+python-multipart>=0.0.6   # File upload support in FastAPI
+
+# --- Dashboard ---
+streamlit>=1.28           # Interactive UI
+plotly>=5.15               # Charts in the dashboard
+requests>=2.31            # Streamlit → FastAPI communication
+
+# --- Testing ---
+pytest>=7.4               # Unit and integration tests
+httpx>=0.25               # Async test client for FastAPI
+
+# --- Optional: AWS S3 ---
+boto3>=1.28              # Required for deploying to EC2 with S3 logging

@@ -1,0 +1,20 @@
+# BioScan – Camera / Ingestion Configuration
+
+source: "data/samples/belt_demo.mp4"  # path to video, webcam index, or rtsp:// URL
+fps_process: 5                        # effective frames per second to process
+
+# Belt region of interest [x, y, width, height] in pixels
+# Set to null to use the full frame
+roi: null
+
+# Pixels → real-world area conversion
+cm2_per_pixel: 0.05                   # PLACEHOLDER – calibrate with a reference object
+
+# Belt motion (used for displacement-based composition)
+belt_speed_cm_s: 20.0
+
+# Grid tiling for patch-based classification
+grid:
+  tile_size: 224                      # pixels per tile side (matches YOLOv8-cls input)
+  stride: 224                         # non-overlapping tiles by default
+  min_belt_coverage: 0.3             # discard tiles with <30% belt pixels (edge tiles)

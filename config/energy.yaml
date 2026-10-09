@@ -1,0 +1,23 @@
+# BioScan – Energy Engine Configuration
+# All values are PLACEHOLDER defaults from literature.
+
+methane_lhv_kwh_per_nm3: 9.97   # lower heating value of CH4
+chp_efficiency: 0.38            # combined heat & power electrical efficiency
+wte_efficiency: 0.22            # waste-to-energy (incineration) electrical efficiency
+
+batch:
+  mode: time            # time | count
+  window_seconds: 60
+  window_objects: 50
+
+uncertainty:
+  mass_rel: 0.25        # ±25% on mass estimate
+  moisture_abs: 0.10    # ±0.10 on moisture fraction
+  bmp_rel: 0.20         # ±20% on BMP
+  lhv_rel: 0.15         # ±15% on LHV
+
+thresholds:
+  min_confidence: 0.35
+  reject_inert_fraction: 0.70
+  digester_max_plastic_fraction: 0.10
+  min_organic_fraction_biogas: 0.40

@@ -1,0 +1,9 @@
+venv/
+data.zip
+original/
+standardized_256/
+standardized_384/
+bioscan/
+__pycache__/
+*.pyc
+.git/

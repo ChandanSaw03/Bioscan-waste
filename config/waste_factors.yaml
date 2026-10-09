@@ -1,0 +1,66 @@
+# BioScan – Waste Factors (PLACEHOLDER values from literature)
+# ============================================================
+# These are screening-level defaults. Calibrate with local waste data.
+#
+# density_g_cm3: effective bulk density of visible pile (includes air gaps)
+# thickness_cm:  assumed layer thickness for area→volume conversion
+# moisture:      fraction of wet mass that is water (0–1)
+# vs_fraction:   volatile solids as fraction of dry mass (0–1)
+# bmp_nm3_ch4_per_kg_vs: biochemical methane potential
+# lhv_mj_per_kg: lower heating value, wet basis (as received)
+
+food_organic:
+  density_g_cm3: 0.60       # PLACEHOLDER – wet food waste on belt
+  thickness_cm: 4.0         # PLACEHOLDER
+  moisture: 0.70            # PLACEHOLDER – typical food waste moisture
+  vs_fraction: 0.90         # PLACEHOLDER – high VS for food
+  bmp_nm3_ch4_per_kg_vs: 0.45  # PLACEHOLDER – literature range 0.2–0.5
+  lhv_mj_per_kg: 4.0       # PLACEHOLDER – low due to high moisture
+
+agri_residue:
+  density_g_cm3: 0.25       # PLACEHOLDER – loose straw/husks
+  thickness_cm: 6.0         # PLACEHOLDER
+  moisture: 0.40            # PLACEHOLDER
+  vs_fraction: 0.85         # PLACEHOLDER
+  bmp_nm3_ch4_per_kg_vs: 0.28  # PLACEHOLDER – literature range 0.15–0.35
+  lhv_mj_per_kg: 10.0      # PLACEHOLDER
+
+paper_cardboard:
+  density_g_cm3: 0.15       # PLACEHOLDER
+  thickness_cm: 2.0         # PLACEHOLDER
+  moisture: 0.10            # PLACEHOLDER
+  vs_fraction: 0.85         # PLACEHOLDER
+  bmp_nm3_ch4_per_kg_vs: 0.10  # PLACEHOLDER – low digestibility
+  lhv_mj_per_kg: 14.0      # PLACEHOLDER
+
+plastic:
+  density_g_cm3: 0.08       # PLACEHOLDER – light films/bottles
+  thickness_cm: 3.0         # PLACEHOLDER
+  moisture: 0.02            # PLACEHOLDER
+  vs_fraction: 0.0          # not digestible
+  bmp_nm3_ch4_per_kg_vs: 0.0
+  lhv_mj_per_kg: 32.0      # PLACEHOLDER – high calorific value
+
+textile:
+  density_g_cm3: 0.12       # PLACEHOLDER
+  thickness_cm: 2.0         # PLACEHOLDER
+  moisture: 0.10            # PLACEHOLDER
+  vs_fraction: 0.0          # treated as non-digestible in MVP
+  bmp_nm3_ch4_per_kg_vs: 0.0
+  lhv_mj_per_kg: 16.0      # PLACEHOLDER
+
+metal:
+  density_g_cm3: 0.50       # PLACEHOLDER – cans, mixed scrap
+  thickness_cm: 2.0         # PLACEHOLDER
+  moisture: 0.0
+  vs_fraction: 0.0
+  bmp_nm3_ch4_per_kg_vs: 0.0
+  lhv_mj_per_kg: 0.0       # inert – no energy
+
+glass_inert:
+  density_g_cm3: 0.70       # PLACEHOLDER
+  thickness_cm: 2.0         # PLACEHOLDER
+  moisture: 0.0
+  vs_fraction: 0.0
+  bmp_nm3_ch4_per_kg_vs: 0.0
+  lhv_mj_per_kg: 0.0       # inert – no energy
