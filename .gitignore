@@ -1,40 +1,34 @@
-# Data - do not commit raw datasets
-data/original/
-data/raw/
-data/remapped/
-data/classifier_dataset/
-data/standardized_*/
-data/custom/*.jpg
-data/custom/*.png
-
-# Model weights
-models/*.pt
-models/*.onnx
-runs/
-
 # Python
-__pycache__/
-*.pyc
-*.pyo
-*.egg-info/
-dist/
-build/
-*.egg
 venv/
 .venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
 
-# IDE
-.vscode/
-.idea/
-*.swp
+# Secrets (never commit)
+.env
+*.pem
+*.key
+.aws/
 
-# OS
-.DS_Store
-Thumbs.db
+# Datasets (large; never commit)
+data/original/
+data/standardized_*/
+data/processed/
+data/raw/
+data/rm/
+data/mv/
 
-# Logs
-*.log
+# Training artifacts and logs
+runs/
 logs/
+data/logs/
+*.log
 
-# Uploads
-uploads/
+# Small final model weights in models/ ARE allowed.
+# If your weights file is larger than ~50 MB, host it on S3 instead.
+
+# Editor / OS
+.vscode/
+.DS_Store
