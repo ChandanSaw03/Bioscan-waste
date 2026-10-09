@@ -32,3 +32,5 @@ data/logs/
 # Editor / OS
 .vscode/
 .DS_Store
+*Zone.Identifier
+*.zip
